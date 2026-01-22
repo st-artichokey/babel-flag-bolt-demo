@@ -1,7 +1,7 @@
 {
-  "name": "slack-reacjilator",
+  "name": "babel-flag-translator",
   "version": "2.0.0",
-  "description": "A translation bot for Slack that translates a message when a user reacted with an emoji",
+  "description": "A translation bot for Slack that translates a message when a user reacts with an emoji",
   "main": "index.js",
   "repository": "github:slackapi/reacjilator",
   "scripts": {
