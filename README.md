@@ -1,7 +1,12 @@
-# Reacjilator for Slack
+# BabelFlag for Slack
 
-Reacjilator translates a message when a user reacts with an emoji (*"reacji"*). For example, when a message gets a `:flag-de:` reacji, this bot translates the original message to German and posts it in the message thread.
+BabelFlag translates a message when a user reacts with an emoji (*"reacji"*). 
 
+Currently this repo is borrowed heavily from the Reacjilator sample app in the Slack CLI. This doc will be updated as this project is built.
+
+For example, when a message gets a `:flag-de:` reacji, this bot translates the original message to German and posts it in the message thread.
+
+(more specific demo image to come)
 ![Reacjilator demo](tutorial_images/reacjilator-demo.gif)
 
 ## Set Up Your Slack App
@@ -14,16 +19,23 @@ Reacjilator translates a message when a user reacts with an emoji (*"reacji"*). 
 
 ### Credentials
 
-Rename the `.env.sample` to `.env` and fill the env vars with your credentials. You also need Google credentials to use the Google translation API:
+Rename the `.env.sample` to `.env` and fill the env vars with your credentials. You also need DeepL credentials to use the DeepL translation API:
 
 ```
-SLACK_SIGNING_SECRET=
-SLACK_AUTH_TOKEN=
-GOOGLE_PROJECT_ID=
-GOOGLE_APPLICATION_CREDENTIALS=
+SLACK_SIGNING_SECRET={your-app-signing-secret}
+SLACK_APP_TOKEN={your-app-token-xapp-1234}
+SLACK_BOT_TOKEN={your-bot-token-xoxb-1234}
+DEEPL_AUTH_KEY=
+PORT=3000
 ```
 
-Get Your Slack App-Level Token at **Basic Information**, And your bot token at **OAuth & Permissions**.
+Go to your [Slack app](https://api.slack.com/apps) to get the follwing tokens:
+- Your Slack App-Level Token at **Basic Information**
+- Your bot token at **OAuth & Permissions**.
 
-Get your Google Cloud project ID and application credentials at [cloud.google.com](https://cloud.google.com/translate/docs/getting-started)
+Get your DeepL auth key via a plan at their [website](https://www.deepl.com/en/pro#developer).
+
+> [!IMPORTANT]  
+> This project requires a *DeepL API account*, not the *DeepL Translator* account. These two things are not the same. If you create a DeepL Translator account, you’ll need to cancel that and then go make a different account for DeepL API. These two accounts can’t share an email address. This is terrible.
+
 

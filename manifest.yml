@@ -2,10 +2,10 @@ _metadata:
   major_version: 1
   minor_version: 1
 display_information:
-  name: Reacjilator
+  name: BabelFlag
 features:
   bot_user:
-    display_name: Reacjilator
+    display_name: Babel Flag Translator
     always_online: false
 oauth_config:
   scopes:
