@@ -1,7 +1,12 @@
 # BabelFlag for Slack
 
-BabelFlag translates a message when a user reacts with an emoji (*"reacji"*). For example, when a message gets a `:flag-de:` reacji, this bot translates the original message to German and posts it in the message thread.
+BabelFlag translates a message when a user reacts with an emoji (*"reacji"*). 
 
+Currently this repo is borrowed heavily from the Reacjilator sample app in the Slack CLI. This doc will be updated as this project is built.
+
+For example, when a message gets a `:flag-de:` reacji, this bot translates the original message to German and posts it in the message thread.
+
+(more specific demo image to come)
 ![Reacjilator demo](tutorial_images/reacjilator-demo.gif)
 
 ## Set Up Your Slack App

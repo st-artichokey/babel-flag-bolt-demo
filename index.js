@@ -9,10 +9,10 @@ const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   socketMode: true,
   appToken: process.env.SLACK_APP_TOKEN,
-  
+  authkey: process.env.DEEPL_AUTH_KEY
 });
 
-const deeplClient = new deepl.DeepLClient(authKey);
+const deeplClient = new deepl.DeepLClient(authkey);
 
 app.event('reaction_added', async ({ event, client }) => {
   const { type, reaction, item } = event;

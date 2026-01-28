@@ -12,7 +12,7 @@ slack create
 ![slack create](./assets/slack-create.png)
 
 
-I'm using the bolt-js-reacjilator sample for this project. It's a great one to check out on its own and will make this project a lot quicker to spin up.
+I'm using the bolt-js-reacjilator sample for this project. It's a great one to check out on its own and made this project a lot quicker to spin up.
 
 ## 2. Add DeepL API Key
 1. Change `env.sample` to `.env` (don’t forget to add this file to your gitignore!)
@@ -42,3 +42,12 @@ The app level token is also under Basic information. You'll go to generate token
 Next, you'll need to set up your OAuth & Permissions. TO do this, go to your terminal and install your app to the workspace.
 
 After you've installed your app to your workspace, you'll go back to the Slack API and copy the Bot User OAuth Token
+
+## 5. Go to the Code!
+For this, I wanted to use DeepL as my translator API. So even though the base sample uses the Google translator, DeepL tends to have better translations. I had to grab a list of supported langs from DeepL and then correlate to the Matching ISO 639-1 language code. 
+
+[DeepL translation target languages](https://developers.deepl.com/docs/getting-started/supported-languages#translation-target-languages)
+
+Using the langcode file because emojis based on flag works for this project. (emoji reacts are `:flag-country:`)
+
+STRETCH GOAL - ask the user which language they want from a country if there’s more than one e.g. Afghanistan that usees both Pashto and Dari
